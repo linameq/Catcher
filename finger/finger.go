@@ -51,7 +51,10 @@ func processFingerprint(fp Fingerprint, domain string, title string, htmlContent
 		}
 	} else if fp.Location == "title" {
 		if strings.Contains(title, fp.Keyword[0]) {
-
+			count++
+			s := fmt.Sprintf("url: \"%s%s\" |响应码: %d |返回长度: %d |title: \"%s\" | 指纹: %s]\n", req, domain, code, length, title, fp.Cms)
+			Fingerdomain = append(Fingerdomain, s)
+			requestpoc.File_poc(req+domain, fp.Cms)
 		}
 	}
 
