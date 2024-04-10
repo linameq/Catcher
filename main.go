@@ -37,9 +37,9 @@ func main() {
 	}
 
 	finger.Http_thread(domains)
-	//cdndomains := cdncheck.CdnCheck(domains)
-	//iplist := cdncheck.Getip(cdndomains)
-	//cdncheck.UniqueSortedIPs(iplist)
+	cdndomains := cdncheck.CdnCheck(domains)
+	iplist := cdncheck.Getip(cdndomains)
+	cdncheck.UniqueSortedIPs(iplist)
 	red := "\033[31m"
 	reset := "\033[0m"
 	text := "此次结果保存在/results/" + finger.TimestampStr + "下"
