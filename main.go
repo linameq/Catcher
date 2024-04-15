@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"strings"
+	"test/cdncheck"
 	"test/finger"
 )
 
