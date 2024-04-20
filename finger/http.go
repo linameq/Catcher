@@ -68,7 +68,7 @@ func Getfavicon(httpBody string, turl string) string {
 		} else if strings.HasPrefix(fav, "http") {
 			faviconPath = fav
 		} else {
-			faviconPath = turl + fav
+			faviconPath = turl + "/"+fav
 		}
 	} else {
 		faviconPath = turl + "/favicon.ico"
